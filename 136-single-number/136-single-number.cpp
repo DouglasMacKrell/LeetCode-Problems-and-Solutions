@@ -14,11 +14,11 @@ public:
                 numCheck[nums[i]] = 1;
             }
         }
-        for (const auto &myPair : numCheck)
+        for (auto const& [key, val] : numCheck)
         {
-            if (numCheck[myPair.first] == 1)
+            if (numCheck[key] == 1)
             {
-                return myPair.first;
+                return key;
             }
         }
         return 0;
