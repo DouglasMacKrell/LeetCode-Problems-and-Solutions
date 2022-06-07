@@ -7,10 +7,8 @@ public:
         } else {
             middle = (arr.size() / 2);
         }
-        
         int left = 0;
         int right = arr.size() - 1;
-        cout << middle;
         while (left <= right) {
             if (arr[middle - 1] < arr[middle] && arr[middle] > arr[middle + 1]) {
                 return middle;
@@ -25,8 +23,6 @@ public:
                 } else {
                     middle = (left + right) / 2;
                 }
-                
-                cout << middle;
             }
         }
         return -1;
