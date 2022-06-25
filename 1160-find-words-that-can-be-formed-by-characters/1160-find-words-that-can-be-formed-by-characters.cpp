@@ -10,12 +10,13 @@ public:
             }
         }
         int result = 0;
+        map<char, int> copyBank;
         for (string word : words) {
-            map<char, int> copyBank;
             copyBank = charBank;
             if (validateAnagram(copyBank, word)) {
                 result += word.size();
             }
+            copyBank.clear();
         }
         return result;
     }
